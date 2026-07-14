@@ -31,6 +31,5 @@ class Solution:
             pred = self.get_model_prediction(X, updated_weights)
             for j in range(len(updated_weights)):
                 updated_weights[j] -= self.learning_rate * self.get_derivative(pred, Y, len(X), X, j)
-                print(updated_weights, " ,")
 
         return np.round(updated_weights, 5)
