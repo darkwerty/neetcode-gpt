@@ -9,10 +9,8 @@ class Solution:
         # eps = 1e-5
         # Normalize: x_hat = (x - mean) / sqrt(var + eps)
         # Scale and shift: out = gamma * x_hat + beta
-        
-        mu    = np.mean(x)
-        var   = np.var(x)
-        x_hat = (x - mu) / np.sqrt(var+1e-5)
+         
+        x_hat = (x - np.mean(x)) / np.sqrt(np.var(x)+1e-5)
 
         out = gamma * x_hat + beta
 
