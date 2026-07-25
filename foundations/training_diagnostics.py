@@ -20,7 +20,7 @@ class Solution:
                     if x.dim() >= 2:
                         dead_frac = round(((x <= 0).all(dim=0)).float().mean().item(), 4)
                     else:
-                        dead_frac = round((x <= 0).float().mean.item(), 4)
+                        dead_frac = round((x <= 0).float().mean().item(), 4)
                     stats.append({"mean": mean_val, "std": std_val, "dead_fraction": dead_frac})
 
         return stats
